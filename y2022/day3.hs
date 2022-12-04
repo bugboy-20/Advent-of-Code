@@ -7,11 +7,11 @@ input = readFile
 splitHalf :: [a] -> ([a],[a])
 splitHalf s = splitAt n s
 	where
-		n = length s `div` 2
+      n = length s `div` 2
 
 errorE (a,b) = head $ intersect a b 
 
-priority = fromList $ (zip ['a'..'z'] [1..26]) ++ (zip ['A'..'Z'] [27..52])
+priority = fromList $ zip ['a'..'z'] [1..26] ++ zip ['A'..'Z'] [27..52]
 
 eval c = priority ! c
 
